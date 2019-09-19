@@ -3,7 +3,9 @@
 ## A. Dal Co[a*], S. van Vliet[a,b], D. J. Kiviet[a],  S. Schlegel[a], M. Ackermann[a]
 
 [a] Department of Environmental Systems Science, ETH Zurich, and Department of Environmental Microbiology Eawag, Ueberlandstrasse 133PO Box 611, 8600 Duebendorf, Switzerland
+
 [b] Department of Zoology, University of British Columbia, 4200-6270 University Blvd., V6T 1Z4 Vancouver, Canada 
+
 [*] Corresponding author: alma.dalco@gmail.com
 
 
@@ -34,6 +36,7 @@ The following functions have an alternative implementation where all four grid b
 - SteadyState_2D_SOR_Solver_2018_CORE_ClosedBoundary
 - SteadyState_2D_SOR_Solver_2018_ClosedBoundary
 - SteadyState_2D_RefineGrid_2018_ClosedBoundary
+
 These functions are identical to the ones described above, except for the implemented boundary condition.
 (Default boundary condition has Dirichlet boundary condition on lower boundary to reflect presence of flow-channel). 
 
