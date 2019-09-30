@@ -191,6 +191,11 @@ ratio_data = IR_pro_data./IR_trp_data;
 [meanTrp,ciUpTrp,ciDownTrp,ciDevTrp]=createConfInterval(IR_trp_data');
 [meanRatio,ciUpRatio,ciDownRatio,ciDevRatio]=createConfInterval(ratio_data');
 
+%store data
+data.IR_pro_data = IR_pro_data;
+data.IR_trp_data = IR_trp_data;
+
+
 %setup vectors for plotting
 oneVec= ones(size(modelOutput.rl_abs));
 data.xCIVec = log10([modelOutput.rl_abs fliplr(modelOutput.rl_abs)]);
