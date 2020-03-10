@@ -78,8 +78,8 @@ if CALC_INT_RANGE
     [GRP, ~]  =  GR_analytical(r0P, settings.Iconst2, rlP);
     [GRT, ~]  =  GR_analytical(r0T, settings.Iconst1, rlT);
     
-    predictedRangeTrp  =  GRT'*settings.cellSpacing;
-    predictedRangePro  =  GRP'*settings.cellSpacing;
+    predictedRangeTrp  =  GRT';
+    predictedRangePro  =  GRP';
     
     
     for nn = 1:numScanPoints %scan uptake rates

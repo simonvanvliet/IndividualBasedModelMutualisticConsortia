@@ -18,7 +18,8 @@ data.YDataNames                   = { ...
     'interactionRangeTrp' ; ...
     };
 
-data.show                         = {[12:1:19],[1:2:19] };
+%data.show                         = {[12:1:19],[1:2:19] };
+data.show                         = {[8:1:19],[1:2:18] };
 
 % FIGURE SETTINGS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 fg = struct;
@@ -79,10 +80,12 @@ for i=data.selection
         'MarkerEdgeColor', fg.MarkerEdgeColor{i} );
     hold on;
     
-    r = corr(data.X{i},data.Y{i}); 
- fprintf('slope = %.3g, offset = %.3g, r2= %.3g\n',dydx(i),offset(i),r^2)
+    
    
 end
+
+dydx = nan(2,1);
+offset = nan(2,1);
 
 for i=data.selection
     %regression
@@ -93,6 +96,9 @@ for i=data.selection
         'LineWidth', fg.LineWidth{i}, ...
         'Color', fg.Color{i}, ...
         'Marker', 'none' );
+    
+    r = corr(data.X{i},data.Y{i}); 
+    fprintf('slope = %.3g, offset = %.3g, r2= %.3g\n',dydx(i),offset(i),r^2)
 
 end
 
